@@ -1,0 +1,71 @@
+@use "./colors.scss" as *;
+@use "./utils.scss" as *;
+
+.blue {
+  color: $wrdBlue;
+}
+
+.green {
+  color: $wrdDarkGreen;
+}
+
+.duo-cards {
+  &__card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &__figure {
+      width: 100%;
+      height: 100%;
+
+      &--image {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+      }
+    }
+
+    &__info {
+      position: absolute;
+      left: 50%;
+      bottom: 10%;
+
+      max-width: 45%;
+      text-align: center;
+
+      transform: translateX(-50%);
+
+      @media screen and (max-width: 800px) {
+        width: 100%;
+        max-width: 90%;
+      }
+
+      &--title {
+        font-family: $fontSecundary;
+        font-size: clamp(1rem, 2vw, 2rem);
+        font-weight: 900;
+        line-height: 1.3;
+
+        margin-bottom: 10%;
+
+        @media screen and (max-width: 800px) {
+          font-size: 2.5rem;
+        }
+      }
+
+      &--description {
+        color: inherit;
+
+        font-family: $fontPrimary;
+        font-size: clamp(0.2rem, 1.4vw, 1.05rem);
+        line-height: 1.7;
+
+        @media screen and (max-width: 800px) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
