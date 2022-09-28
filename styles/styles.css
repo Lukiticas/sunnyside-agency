@@ -293,6 +293,7 @@ table {
 .duo-cards__card__figure--image {
   width: 100%;
   height: 100%;
+  max-height: 40rem;
   object-fit: cover;
 }
 .duo-cards__card__info {
@@ -337,7 +338,7 @@ header {
   height: 49rem;
   position: relative;
   width: 100vw;
-  max-width: 200rem;
+  max-width: 170rem;
   margin: 0 auto;
 }
 
@@ -422,7 +423,7 @@ header {
 .hero-section__figure__image {
   width: 100%;
   height: 100%;
-  max-width: 200rem;
+  max-width: 170rem;
   object-fit: cover;
 }
 .hero-section__text {
@@ -487,15 +488,24 @@ body {
 
 main {
   width: 100vw;
-  max-width: 200rem;
+  max-width: 170rem;
   margin: 0 auto;
 }
 
 .client-testimonials {
+  font-size: 0.9rem;
   width: 100%;
-  min-height: 90vh;
-  display: grid;
-  place-items: center;
+  padding-block: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+}
+@media screen and (max-width: 800px) {
+  .client-testimonials {
+    font-size: 1em;
+  }
 }
 .client-testimonials > h3 {
   color: hsl(210deg, 4%, 67%);
@@ -504,42 +514,79 @@ main {
   letter-spacing: 0.5rem;
 }
 .client-testimonials__list {
-  width: 100%;
+  width: auto;
   height: 100%;
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 6em;
+  margin: 0 auto;
+}
+@media screen and (max-width: 800px) {
+  .client-testimonials__list {
+    gap: 8em;
+  }
 }
 .client-testimonials__list__item {
-  max-width: 25rem;
-  max-height: 25rem;
-  height: 100%;
-  text-align: center;
+  width: 23em;
+  height: 25em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .client-testimonials__list__item {
+    height: 21em;
+  }
 }
 .client-testimonials__list__item--image {
   border-radius: 100vw;
-  max-width: 6rem;
+  max-width: 5.5em;
 }
 .client-testimonials__list__item--caption {
   color: hsl(213deg, 9%, 39%);
-  font-size: 1.2rem;
+  font-size: 1.2em;
   line-height: 1.6;
   font-weight: 600;
 }
 .client-testimonials__list__item--footer h4 {
   color: hsl(212deg, 27%, 19%);
   font-weight: 800;
-  font-size: 1.3rem;
+  font-size: 1.3em;
   font-family: "Fraunces", serif;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1em;
 }
 .client-testimonials__list__item--footer > small {
   color: hsl(232deg, 10%, 55%);
   font-weight: 600;
+}
+
+.image-gallery {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+@media screen and (max-width: 800px) {
+  .image-gallery {
+    flex-flow: row wrap;
+  }
+}
+.image-gallery__item {
+  flex: 1;
+}
+@media screen and (max-width: 800px) {
+  .image-gallery__item {
+    flex: auto;
+    width: 50%;
+  }
+}
+.image-gallery__item--image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=styles.css.map */
