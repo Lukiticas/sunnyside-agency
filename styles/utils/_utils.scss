@@ -1,0 +1,138 @@
+@mixin scrollbars(
+  $size,
+  $foreground-color,
+  $background-color: mix($foreground-color, white, 50%)
+) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+@mixin use-space($w: 100%, $h: 100%, $maxW: false, $maxH: false) {
+  width: $w;
+  height: $h;
+
+  @if $maxW {
+    max-width: $maxW;
+  }
+
+  @if $maxH {
+    max-height: $maxH;
+  }
+}
+
+@mixin place-in(
+  $justify: center,
+  $align: center,
+  $gap: none,
+  $flow: row nowrap
+) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+  flex-flow: $flow;
+}
+
+@mixin create-bar(
+  $width: 100%,
+  $initial-width: 0%,
+  $y-pos: 0.8rem,
+  $h: 0.7rem,
+  $z-index: -5,
+  $bg: none
+) {
+  &:hover {
+    &::before {
+      width: $width;
+    }
+  }
+
+  &::before {
+    content: "";
+    @include use-space($initial-width, $h);
+    z-index: $z-index;
+
+    position: absolute;
+    left: 0;
+    bottom: $y-pos;
+
+    border-radius: 1em;
+    transition: width 100ms ease;
+
+    @if $bg != none {
+      background-color: $bg;
+    }
+  }
+}
+
+@mixin lettering(
+  $fs: normal,
+  $fw: normal,
+  $line-height: normal,
+  $clr: normal,
+  $ls: normal
+) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $line-height;
+  color: $clr;
+  letter-spacing: $ls;
+}
+
+@keyframes jumpInfinite {
+  0% {
+    transform: translateY(10%);
+  }
+  50% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes appearFromLeft {
+  from {
+    transform: translateX(100vw);
+  }
+
+  to {
+    transform: translateX(0vw);
+  }
+}
+
+@keyframes appearFromRight {
+  from {
+    transform: translateX(-100vw);
+  }
+
+  to {
+    transform: translateX(0vw);
+  }
+}
+
+$headerH: 49rem;
+$headerIMGoffset: 50rem;
+$offsetHeader: 6rem;
+
+$maxwidthMain: 170rem;
+$descriptionHeight: 40rem;
+
+$responsiveFontsize: 3vw;

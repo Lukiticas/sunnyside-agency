@@ -1,0 +1,58 @@
+@use "../utils/colors.scss" as *;
+@use "../utils/utils.scss" as *;
+
+.main-footer {
+  @include use-space(100%, 30rem);
+  @include place-in(center, center, 3rem, column nowrap);
+
+  background-color: $bg400;
+
+  &__logo {
+    width: 15rem;
+    cursor: pointer;
+
+    transition: filter 150ms ease-in;
+    filter: brightness(0) saturate(100%) invert(32%) sepia(64%) saturate(381%)
+      hue-rotate(118deg) brightness(97%) contrast(89%);
+
+    &:hover {
+      filter: none;
+    }
+  }
+
+  &__navbar {
+    margin-block-end: 5rem;
+
+    &__list {
+      display: flex;
+      gap: 5.5rem;
+    }
+
+    &--item {
+      font-size: 1.3rem;
+      color: $wrdDarkGreen;
+      cursor: pointer;
+
+      &:hover {
+        color: $wrd300;
+      }
+    }
+  }
+
+  &__social-media {
+    @include place-in(center, center, 2.4rem, row nowrap);
+
+    &--link {
+      &:hover > * {
+        transform: translateY(-50%) rotate(360deg);
+        filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
+          saturate(0%) hue-rotate(162deg) brightness(108%) contrast(101%);
+      }
+    }
+
+    &--image {
+      width: 1.6rem;
+      cursor: pointer;
+    }
+  }
+}

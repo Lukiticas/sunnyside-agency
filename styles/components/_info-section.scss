@@ -1,0 +1,112 @@
+@use "../utils/colors.scss" as *;
+@use "../utils/utils.scss" as *;
+
+.info-section {
+  @include use-space();
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+
+  @media screen and (max-width: 600px) {
+    .info-section__description:first-child {
+      order: 1;
+    }
+  }
+
+  &:nth-of-type(even) {
+    .info-section__description:first-child {
+      order: 1;
+    }
+  }
+
+  &:not(.duo-cards) > *:hover + * img {
+    transform: scale(1.2);
+  }
+
+  &__description {
+    @include use-space(100%, 100%, none, $descriptionHeight);
+
+    display: grid;
+    place-items: center;
+
+    &__container {
+      max-width: 64%;
+      padding: 5rem;
+      text-align: left;
+
+      @media screen and (max-width: 900px) {
+        max-width: 80%;
+        padding: 0;
+
+        text-align: center;
+        margin-block: 2.5rem;
+      }
+
+      & > *:not(:last-child) {
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    &--title {
+      font-family: $fontSecundary;
+      @include lettering(2.7rem, 900, 1.2, $wrd800);
+      @media screen and (max-width: 600px) {
+        font-size: 2.8rem;
+      }
+    }
+
+    &--text {
+      font-family: $fontPrimary;
+      @include lettering(1.15em, normal, 1.7, $wrd500);
+      @media screen and (max-width: 600px) {
+        font-size: 1.7rem;
+      }
+    }
+
+    &--button {
+      width: auto;
+      position: relative;
+
+      outline: none;
+      padding: 1em;
+      padding-inline: 0.5em;
+
+      border: none;
+      border-radius: 1em;
+
+      background-color: transparent;
+
+      font-family: $fontSecundary;
+
+      @include lettering(1.2em, 900, nromal, $wrd800);
+      @include create-bar(100%, 30%, 0.8em, 0.7em, -5);
+
+      cursor: pointer;
+      @media screen and (max-width: 600px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__figure {
+    max-height: $descriptionHeight;
+    max-width: 100%;
+    overflow: hidden;
+
+    &,
+    &__image {
+      @include use-space();
+    }
+
+    &__image {
+      @include use-space();
+      object-fit: cover;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+    font-size: 1.1em;
+  }
+}

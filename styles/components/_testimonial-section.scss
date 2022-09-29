@@ -1,0 +1,80 @@
+@use "../utils/colors.scss" as *;
+@use "../utils/utils.scss" as *;
+
+.client-testimonials {
+  @include use-space();
+  @include place-in(center, center, 3em, column nowrap);
+
+  font-size: 0.8rem;
+  padding-block: 8.6rem;
+  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+
+  @media screen and (max-width: 600px) {
+    font-size: 1.2rem;
+  }
+  & > h3 {
+    font-family: $fontSecundary;
+    @include lettering(1.3em, normal, normal, $wrd400, 0.5em);
+    text-align: center;
+  }
+
+  &__list {
+    @include use-space(auto, fit-content);
+    @include place-in(center, center, 6em, row wrap);
+    margin: 0 auto;
+
+    &:hover &__item:not(:hover) {
+      filter: blur(0.1rem);
+      transform: translatey(1.1%);
+    }
+
+    @media screen and (max-width: 600px) {
+      gap: 8em;
+    }
+
+    &__item {
+      @include use-space(23em, 25em);
+      @include place-in(space-between, center, none, column);
+
+      padding-block: 3em;
+      text-align: center;
+      cursor: default;
+
+      &:hover {
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 0.2em 0px;
+      }
+
+      @media screen and (max-width: 600px) {
+        height: 21em;
+      }
+      &--image {
+        max-width: 5.5em;
+        border-radius: 100vw;
+
+        &:hover {
+          transform: scale(1.08);
+        }
+      }
+
+      &--caption {
+        @include lettering(1.2em, 600, 1.6, $wrd600);
+      }
+
+      &--footer {
+        & h4 {
+          font-family: $fontSecundary;
+          @include lettering(1.3em, 800, 2, $wrd800);
+
+          margin-bottom: 1em;
+          &:hover {
+            color: $accOrange;
+          }
+        }
+
+        & > small {
+          @include lettering(normal, 600, normal, $wrd400);
+        }
+      }
+    }
+  }
+}

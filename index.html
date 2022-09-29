@@ -19,23 +19,23 @@
     <!-- HEADER -->
     <header>
       <div class="main-header">
-        <img src="./images/logo.svg" class="main-header__logo" alt="logo" />
+        <img src="./images/logo.svg" class="main-header__logo logo" alt="logo" />
 
  
-          <i class="ph-list-fill main-header__hamburguer"></i>
+          <i class="ph-list-fill main-header__hamburguer hamburguer"></i>
 
 
-          <div class="main-header-nav-wrap">
+          <div class="main-header-nav-wrap pop-up off">
 
-            <nav class="main-header__nav">
-              <ol class="main-header__nav-list">
-                <li><a href="#" class="main-header__nav-list__item">About</a></li>
-                <li ><a href="#" class="main-header__nav-list__item">Services</a></li>
-                <li ><a href="#" class="main-header__nav-list__item">Project</a></li>
+            <nav class="main-header__nav pop-up--nav">
+              <ol class="main-header__nav-list pop-up--list">
+                <li><a href="javascript:void(0)" class="main-header__nav-list__item pop-up--nav__item">About</a></li>
+                <li ><a href="javascript:void(0)" class="main-header__nav-list__item pop-up--nav__item">Services</a></li>
+                <li ><a href="javascript:void(0)" class="main-header__nav-list__item pop-up--nav__item">Project</a></li>
               </ol>
             </nav>
 
-            <button type="button" class="main-header__button">
+            <button type="button" class="main-header__button pop-up--nav__button">
               contact
             </button>
 
@@ -71,7 +71,7 @@
       <!-- INFO SECTION -->
       <section class="info-section">
 
-        <section class="info-section__description">
+        <section class="info-section__description" >
           <div class="info-section__description__container">
             <h3 class="info-section__description--title">
               Transform your brand
@@ -101,7 +101,7 @@
 
       </section>
 
-      <section class="info-section">
+      <section class="info-section" id="index">
 
         <section class="info-section__description">
           <div class="info-section__description__container">
@@ -142,7 +142,7 @@
           <picture class="duo-cards__card__figure">
 
             <source
-              media="(min-width:800px)"
+              media="(min-width:600px)"
               srcset="./images/desktop/image-graphic-design.jpg"
             />
             <img
@@ -169,7 +169,7 @@
         <div class="duo-cards__card blue">
           <picture class="duo-cards__card__figure">
             <source
-              media="(min-width:800px)"
+              media="(min-width:600px)"
               srcset="./images/desktop/image-photography.jpg"
             />
             <img
@@ -241,7 +241,7 @@
 
         <picture class="image-gallery__item">
           <source
-            media="(min-width:800px)"
+            media="(min-width:600px)"
             srcset="./images/desktop/image-gallery-milkbottles.jpg"
           />
           <img
@@ -253,7 +253,7 @@
 
         <picture class="image-gallery__item">
           <source
-            media="(min-width:800px)"
+            media="(min-width:600px)"
             srcset="./images/desktop/image-gallery-orange.jpg"
           />
           <img
@@ -265,7 +265,7 @@
 
         <picture class="image-gallery__item">
           <source
-            media="(min-width:800px)"
+            media="(min-width:600px)"
             srcset="./images/desktop/image-gallery-cone.jpg"
           />
           <img
@@ -277,7 +277,7 @@
 
         <picture class="image-gallery__item">
           <source
-            media="(min-width:800px)"
+            media="(min-width:600px)"
             srcset="./images/desktop/image-gallery-sugarcubes.jpg"
           />
           <img
@@ -287,6 +287,30 @@
           />
         </picture>
       </section>
+
+      <footer class="main-footer">
+
+        <image class="main-footer__logo logo" src="./images/logo.svg" alt="logo" />
+
+        <nav class="main-footer__navbar">
+
+          <ol class="main-footer__navbar__list">
+            <li><a href="javascript:void(0)" class="main-footer__navbar--item" >About</a></li>
+            <li><a href="javascript:void(0)" class="main-footer__navbar--item">Services</a></li>
+            <li><a href="javascript:void(0)" class="main-footer__navbar--item">Projects</a></li>
+          </ol>
+
+        </nav>
+
+        <div class="main-footer__social-media">
+          <a href="javascript:void(0)" class="main-footer__social-media--link"><img class="main-footer__social-media--image" src="./images/icons/icon-instagram.svg" alt="instagram's icon" /></a>
+          <a href="javascript:void(0)" class="main-footer__social-media--link"><img class="main-footer__social-media--image" src="./images/icons/icon-twitter.svg" alt="twitter's icon" /></a>
+          <a href="javascript:void(0)" class="main-footer__social-media--link"><img class="main-footer__social-media--image" src="./images/icons/icon-pinterest.svg" alt="pinterest's icon" /></a>
+          <a href="javascript:void(0)" class="main-footer__social-media--link"><img class="main-footer__social-media--image" src="./images/icons/icon-facebook.svg" alt="facebook's icon" /></a>
+        </div>
+
+      </footer>
+
     </main>
   </body>
 </html>

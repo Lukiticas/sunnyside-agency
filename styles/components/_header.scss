@@ -1,0 +1,127 @@
+@use "../utils/utils.scss" as *;
+@use "../utils/colors.scss" as *;
+
+header {
+  @include use-space(100vw, $headerH, $maxwidthMain);
+  margin: 0 auto;
+  position: relative;
+}
+
+.main-header {
+  max-width: 100%;
+  min-height: $offsetHeader;
+  position: relative;
+
+  padding-inline: 2rem;
+  @include place-in(space-between, center);
+
+  &__nav-list,
+  &-nav-wrap {
+    @include place-in(none, center);
+  }
+
+  &__nav-list {
+    gap: 3rem;
+    font-size: 1.1rem;
+
+    &__item {
+      color: $wrd300;
+
+      &:hover {
+        color: $accBlue;
+      }
+    }
+  }
+
+  &__logo {
+    width: 13rem;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05) rotate(5deg);
+    }
+  }
+
+  &__button {
+    font-family: $fontSecundary;
+    @include lettering(0.8rem, 600, 1.6, $wrd800);
+    text-transform: uppercase;
+
+    margin-inline: 2.8rem;
+    cursor: pointer;
+
+    background-color: $bg300;
+
+    padding: 0.9rem 1.8rem;
+    outline: none;
+
+    border: none;
+    border-radius: 4rem;
+
+    &:hover {
+      color: $bg300;
+      background-color: transparentize($wrd300, 0.5);
+    }
+  }
+
+  &__hamburguer {
+    display: none;
+    font-size: 3rem;
+    color: $wrd300;
+
+    @media screen and (max-width: 800px) {
+      display: block;
+    }
+  }
+}
+
+.hero-section {
+  @include use-space(100%, calc($headerH - $offsetHeader));
+  @include place-in(center, flex-start);
+
+  @media screen and (max-width: 600px) {
+    font-size: 4rem;
+  }
+
+  &__figure {
+    @include use-space(100%, $headerH, $maxwidthMain);
+    position: absolute;
+    top: 0;
+
+    z-index: -10;
+
+    &__image {
+      @include use-space(100%, 100%, $maxwidthMain);
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    @include use-space(100%, calc($headerH - 11rem), $maxwidthMain);
+    @include place-in(center, center, 7rem, column nowrap);
+
+    font-family: $fontSecundary;
+    text-align: center;
+
+    h2 {
+      position: relative;
+      @include lettering(3.2rem, normal, 1.6, $wrd300, 1rem);
+      @include create-bar(100%, 0%, 0.1rem, 1rem, -1, $accOrange);
+
+      animation: appearFromRight 200ms ease-in forwards;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    &--arrow-down {
+      width: 3rem;
+      cursor: pointer;
+      animation: jumpInfinite 0.9s infinite alternate;
+      animation-timing-function: linear;
+
+      animation: appearFromLeft 200ms ease-in forwards;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 $accOrange: hsl(7, 99%, 70%);
 $accYellow: hsl(51, 100%, 49%);
-$accGreen: hsl(168, 34%, 41%);
+$accGreen: hsl(167, 44%, 70%);
+$accDarkgreen: hsl(168, 34%, 41%);
 $wrdDarkGreen: hsl(167, 40%, 24%);
 $accBlue: hsl(198, 62%, 26%);
 $accLightblue: hsl(200, 100%, 62%);
@@ -31,4 +32,12 @@ $fontSecundary: "Fraunces", serif;
   &::before {
     background-color: $accOrange;
   }
+}
+
+.blue {
+  color: $wrdBlue;
+}
+
+.green {
+  color: $wrdDarkGreen;
 }

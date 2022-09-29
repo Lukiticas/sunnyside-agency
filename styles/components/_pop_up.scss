@@ -1,0 +1,58 @@
+@use "../utils/colors.scss" as *;
+@use "../utils/utils.scss" as *;
+
+@media screen and (max-width: 800px) {
+  .pop-up {
+    @include place-in(space-between, center, 3rem, column nowrap);
+    width: clamp(10rem, 100%, 22rem);
+
+    position: absolute;
+    top: 100%;
+    right: 2.3rem;
+    z-index: 1000;
+
+    padding-inline-start: 2rem;
+    padding-block: 3.2rem;
+
+    transform: scale(1) translateY(0%);
+    transform-origin: top right;
+
+    border-radius: 0.2rem;
+    border-top: 2rem solid transparent;
+    border-right: 2rem solid $bg300;
+
+    background-clip: padding-box;
+    background-color: $bg300;
+
+    &--list {
+      @include place-in();
+      @include place-in(space-between, center, 3rem, column nowrap);
+    }
+
+    &--nav {
+      &__item {
+        @include create-bar(100%, 30%, 0.8em, 0.7em, 10);
+        @include lettering(1.8rem, 900, normal, $wrd500);
+        position: relative;
+
+        &:hover {
+          color: darken($accYellow, 2%);
+        }
+      }
+
+      &__button {
+        padding: 1.4rem 2rem;
+        font-size: 1.5rem;
+        background-color: $accYellow;
+
+        &:hover {
+          background-color: $accLightblue;
+        }
+      }
+    }
+  }
+
+  .off {
+    transform: scale(0) translateY(20%);
+  }
+}
