@@ -597,7 +597,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3em;
+  gap: 2.5em;
   flex-flow: column nowrap;
   font-size: 0.8rem;
   padding-block: 8.6rem;
@@ -610,8 +610,8 @@ header {
 }
 .client-testimonials > h3 {
   font-family: "Fraunces", serif;
-  font-size: 1.3em;
-  font-weight: normal;
+  font-size: 1.5em;
+  font-weight: 600;
   line-height: normal;
   color: hsl(210deg, 4%, 67%);
   letter-spacing: 0.5em;
@@ -633,7 +633,7 @@ header {
 }
 @media screen and (max-width: 600px) {
   .client-testimonials__list {
-    gap: 8em;
+    gap: 6em;
   }
 }
 .client-testimonials__list__item {

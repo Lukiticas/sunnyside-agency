@@ -3,7 +3,7 @@
 
 .client-testimonials {
   @include use-space();
-  @include place-in(center, center, 3em, column nowrap);
+  @include place-in(center, center, 2.5em, column nowrap);
 
   font-size: 0.8rem;
   padding-block: 8.6rem;
@@ -14,7 +14,7 @@
   }
   & > h3 {
     font-family: $fontSecundary;
-    @include lettering(1.3em, normal, normal, $wrd400, 0.5em);
+    @include lettering(1.5em, 600, normal, $wrd400, 0.5em);
     text-align: center;
   }
 
@@ -30,7 +30,7 @@
     }
 
     @media screen and (max-width: 600px) {
-      gap: 8em;
+      gap: 6em;
     }
 
     &__item {
