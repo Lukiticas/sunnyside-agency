@@ -162,22 +162,22 @@ table {
     transform: translateY(0%);
   }
 }
-@keyframes appearFromLeft {
+@keyframes appearFromTop {
   from {
-    transform: translateX(100vw);
+    transform: translateY(-100vh);
   }
   to {
-    transform: translateX(0vw);
+    transform: translateY(0vw);
   }
 }
-@keyframes appearFromRight {
-  from {
-    transform: translateX(-100vw);
-  }
-  to {
-    transform: translateX(0vw);
-  }
+.info-section > * {
+  opacity: 1;
 }
+
+.opacity-zero {
+  opacity: 0;
+}
+
 header {
   width: 100vw;
   height: 49rem;
@@ -211,14 +211,14 @@ header {
 .main-header__nav-list__item {
   color: hsl(0deg, 0%, 100%);
 }
-.main-header__nav-list__item:hover {
+.main-header__nav-list__item:hover, .main-header__nav-list__item:focus-within {
   color: hsl(198deg, 62%, 26%);
 }
 .main-header__logo {
   width: 13rem;
   cursor: pointer;
 }
-.main-header__logo:hover {
+.main-header__logo:hover, .main-header__logo:focus-within {
   transform: scale(1.05) rotate(5deg);
 }
 .main-header__button {
@@ -237,7 +237,7 @@ header {
   border: none;
   border-radius: 4rem;
 }
-.main-header__button:hover {
+.main-header__button:hover, .main-header__button:focus-visible {
   color: hsl(0deg, 0%, 100%);
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -293,13 +293,14 @@ header {
   text-align: center;
 }
 .hero-section__text h2 {
+  cursor: default;
   position: relative;
   font-size: 3.2rem;
   font-weight: normal;
   line-height: 1.6;
   color: hsl(0deg, 0%, 100%);
   letter-spacing: 1rem;
-  animation: appearFromRight 200ms ease-in forwards;
+  animation: appearFromTop 600ms cubic-bezier(0.82, 0.38, 0.27, 1.69) forwards;
 }
 .hero-section__text h2:hover::before {
   width: 100%;
@@ -307,11 +308,11 @@ header {
 .hero-section__text h2::before {
   content: "";
   width: 0%;
-  height: 1rem;
+  height: 1.2rem;
   z-index: -1;
   position: absolute;
   left: 0;
-  bottom: 0.1rem;
+  bottom: 0.8rem;
   border-radius: 1em;
   transition: width 100ms ease;
   background-color: hsl(7deg, 99%, 70%);
@@ -323,8 +324,6 @@ header {
   width: 3rem;
   cursor: pointer;
   animation: jumpInfinite 0.9s infinite alternate;
-  animation-timing-function: linear;
-  animation: appearFromLeft 200ms ease-in forwards;
 }
 
 @media screen and (max-width: 800px) {
@@ -383,7 +382,7 @@ header {
     border-radius: 1em;
     transition: width 100ms ease;
   }
-  .pop-up--nav__item:hover {
+  .pop-up--nav__item:hover, .pop-up--nav__item:focus-within {
     color: #f0cc00;
   }
   .pop-up--nav__button {
@@ -391,7 +390,7 @@ header {
     font-size: 1.5rem;
     background-color: hsl(51deg, 100%, 49%);
   }
-  .pop-up--nav__button:hover {
+  .pop-up--nav__button:hover, .pop-up--nav__button:focus-within {
     background-color: hsl(200deg, 100%, 62%);
   }
   .off {
@@ -537,10 +536,10 @@ header {
     font-size: clamp(2.5em, 3vw, 5rem);
   }
 }
-.duo-cards__card:hover img {
+.duo-cards__card:hover img, .duo-cards__card:focus-within img {
   transform: scale(1.05);
 }
-.duo-cards__card:hover > .duo-cards__card__info {
+.duo-cards__card:hover > .duo-cards__card__info, .duo-cards__card:focus-within > .duo-cards__card__info {
   transform: translateX(-50%) translateY(-5%);
 }
 .duo-cards__card__figure--image {
@@ -628,9 +627,9 @@ header {
   flex-flow: row wrap;
   margin: 0 auto;
 }
-.client-testimonials__list:hover .client-testimonials__list__item:not(:hover) {
-  filter: blur(0.1rem);
-  transform: translatey(1.1%);
+.client-testimonials__list:hover .client-testimonials__list__item:not(:hover), .client-testimonials__list:focus-within .client-testimonials__list__item:not(:focus-within) {
+  filter: blur(0.1rem) grayscale(1);
+  transform: translatey(1.5%);
 }
 @media screen and (max-width: 600px) {
   .client-testimonials__list {
@@ -649,8 +648,8 @@ header {
   text-align: center;
   cursor: default;
 }
-.client-testimonials__list__item:hover {
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 0.2em 0px;
+.client-testimonials__list__item:hover, .client-testimonials__list__item:focus-within {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0.3em 0px;
 }
 @media screen and (max-width: 600px) {
   .client-testimonials__list__item {
@@ -661,7 +660,7 @@ header {
   max-width: 5.5em;
   border-radius: 100vw;
 }
-.client-testimonials__list__item--image:hover {
+.client-testimonials__list__item--image:hover, .client-testimonials__list__item--image:focus-within {
   transform: scale(1.08);
 }
 .client-testimonials__list__item--caption {
@@ -680,7 +679,7 @@ header {
   letter-spacing: normal;
   margin-bottom: 1em;
 }
-.client-testimonials__list__item--footer h4:hover {
+.client-testimonials__list__item--footer h4:hover, .client-testimonials__list__item--footer h4:focus-within {
   color: hsl(7deg, 99%, 70%);
 }
 .client-testimonials__list__item--footer > small {
@@ -709,7 +708,7 @@ header {
     flex-flow: row wrap;
   }
 }
-.image-gallery:hover .image-gallery__item:not(:hover) {
+.image-gallery:hover .image-gallery__item:not(:hover), .image-gallery:focus-within .image-gallery__item:not(:focus-within) {
   filter: grayscale(100%) blur(0.1rem);
 }
 .image-gallery__item {
@@ -718,7 +717,7 @@ header {
   overflow: hidden;
   transition: all 200ms ease-in;
 }
-.image-gallery__item:hover > * {
+.image-gallery__item:hover > *, .image-gallery__item:focus-within > * {
   transform: scale(1.2);
 }
 @media screen and (max-width: 700px) {
@@ -750,7 +749,7 @@ header {
   transition: filter 150ms ease-in;
   filter: brightness(0) saturate(100%) invert(32%) sepia(64%) saturate(381%) hue-rotate(118deg) brightness(97%) contrast(89%);
 }
-.main-footer__logo:hover {
+.main-footer__logo:hover, .main-footer__logo:focus-visible {
   filter: none;
 }
 .main-footer__navbar {
@@ -765,7 +764,7 @@ header {
   color: hsl(167deg, 40%, 24%);
   cursor: pointer;
 }
-.main-footer__navbar--item:hover {
+.main-footer__navbar--item:hover, .main-footer__navbar--item:focus-visible {
   color: hsl(0deg, 0%, 100%);
 }
 .main-footer__social-media {
@@ -775,7 +774,7 @@ header {
   gap: 2.4rem;
   flex-flow: row nowrap;
 }
-.main-footer__social-media--link:hover > * {
+.main-footer__social-media--link:hover > *, .main-footer__social-media--link:focus-visible > * {
   transform: translateY(-50%) rotate(360deg);
   filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(162deg) brightness(108%) contrast(101%);
 }
@@ -797,7 +796,7 @@ header {
 *::after,
 *::before,
 * {
-  transition: background-color 300ms ease, color 300ms ease, transform 300ms ease;
+  transition: background-color 300ms ease, color 300ms ease, transform 300ms ease, opacity 300ms ease-in;
 }
 
 body {
@@ -820,7 +819,8 @@ body {
   scrollbar-track-color: #8ca9b5;
 }
 
-main {
+main,
+footer {
   width: 100%;
   height: 100%;
   max-width: 170rem;

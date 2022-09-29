@@ -16,16 +16,13 @@
     <title>Sunnyside | Be creative!</title>
   </head>
   <body>
-    <!-- HEADER -->
     <header>
       <div class="main-header">
         <img src="./images/logo.svg" class="main-header__logo logo" alt="logo" />
 
- 
-          <i class="ph-list-fill main-header__hamburguer hamburguer"></i>
+          <i class="ph-list-fill main-header__hamburguer hamburguer" tabindex="0"></i>
 
-
-          <div class="main-header-nav-wrap pop-up off">
+          <div class="main-header-nav-wrap pop-up off" tabindex="0">
 
             <nav class="main-header__nav pop-up--nav">
               <ol class="main-header__nav-list pop-up--list">
@@ -35,7 +32,7 @@
               </ol>
             </nav>
 
-            <button type="button" class="main-header__button pop-up--nav__button">
+            <button type="button" class="main-header__button pop-up--nav__button" tabindex="0">
               contact
             </button>
 
@@ -59,17 +56,15 @@
 
         <div class="hero-section__text">
           <h2>WE ARE CREATIVES</h2>
-          <img class="hero-section__text--arrow-down" src="./images/icons/icon-arrow-down.svg" alt="arrow down" />
+          <img class="hero-section__text--arrow-down" src="./images/icons/icon-arrow-down.svg" alt="arrow down" tabindex="0"/>
         </div>
 
       </div>
 
     </header>
-    <!-- HEADER END -->
 
     <main>
-      <!-- INFO SECTION -->
-      <section class="info-section">
+      <div class="info-section" role="">
 
         <section class="info-section__description" >
           <div class="info-section__description__container">
@@ -81,7 +76,7 @@
               We are full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.
             </p>
             
-            <button type="button" class="yellow info-section__description--button "> 
+            <button type="button" tabindex="0" class="yellow info-section__description--button "> 
               LEARN MORE
             </button>
           </div>
@@ -99,9 +94,9 @@
           />
         </picture>
 
-      </section>
+      </div>
 
-      <section class="info-section" id="index">
+      <div class="info-section" id="index">
 
         <section class="info-section__description">
           <div class="info-section__description__container">
@@ -113,7 +108,7 @@
               Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places
             </p>
             
-            <button type="button" class="orange info-section__description--button "> 
+            <button type="button" tabindex="0" class="orange info-section__description--button "> 
               LEARN MORE
             </button>
           </div>
@@ -131,13 +126,10 @@
           />
         </picture>
 
-      </section>
-      <!-- INFO SECTION END-->
+      </div>
 
-      <!-- DUO CARDS SECTION -->
-      <section class="info-section duo-cards ">
+      <div class="info-section duo-cards ">
 
-        <!-- GRAPHIC DESIGN -->
         <div class="duo-cards__card green">
           <picture class="duo-cards__card__figure">
 
@@ -152,7 +144,7 @@
             />
           </picture>
 
-          <section class="duo-cards__card__info">
+          <section class="duo-cards__card__info" tabindex="0">
             <h3 class="duo-cards__card__info--title">
               Graphic Design
             </h3>
@@ -162,10 +154,7 @@
           </section>
 
         </div>
-        <!-- GRAPHIC DESIGN END -->
 
-
-        <!-- PHOTOGRAPHY  -->
         <div class="duo-cards__card blue">
           <picture class="duo-cards__card__figure">
             <source
@@ -179,7 +168,7 @@
             />
           </picture>
 
-          <section class="duo-cards__card__info">
+          <section class="duo-cards__card__info" tabindex="0">
             <h3 class="duo-cards__card__info--title">
               Photography
             </h3>
@@ -189,10 +178,8 @@
           </section>
 
         </div>
-        <!-- PHOTOGRAPHY  END -->
 
-      </section>
-      <!-- DUO CARDS SECTION END -->
+      </div>
 
       <section class="client-testimonials">
         <h3>
@@ -200,18 +187,18 @@
         </h3>
         <div class="client-testimonials__list">
 
-          <figure class="client-testimonials__list__item">
+          <figure class="client-testimonials__list__item" tabindex="0">
             <img class="client-testimonials__list__item--image" src="./images/image-emily.jpg" alt="emily's selfie" />
             <figcaption class="client-testimonials__list__item--caption" >
               We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were aways hit.
             </figcaption >
-            <footer class="client-testimonials__list__item--footer">
+            <footer class="client-testimonials__list__item--footer" >
               <h4  class="client-testimonials__list__item--footer__name">Emily R.</h4>
               <small class="client-testimonials__list__item--footer__small">Marketing Director</small>
             </footer>
           </figure>
 
-          <figure class="client-testimonials__list__item">
+          <figure class="client-testimonials__list__item" tabindex="0">
             <img class="client-testimonials__list__item--image" src="./images/image-thomas.jpg" alt="thomas's selfie" />
             <figcaption class="client-testimonials__list__item--caption" >
               Sunnyside's enthusiasm coupled with their keen interest in our brand's sucess made it a satisfyingand enjoyable experience.
@@ -222,7 +209,7 @@
             </footer>
           </figure>
 
-          <figure class="client-testimonials__list__item">
+          <figure class="client-testimonials__list__item" tabindex="0">
             <img class="client-testimonials__list__item--image" src="./images/image-jennie.jpg" alt="jennie's selfie" />
             <figcaption class="client-testimonials__list__item--caption" >
               incredible and result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
@@ -234,12 +221,12 @@
           </figure>
 
         </div>
-
+        
       </section>
 
       <section class="image-gallery">
 
-        <picture class="image-gallery__item">
+        <picture class="image-gallery__item" tabindex="0">
           <source
             media="(min-width:600px)"
             srcset="./images/desktop/image-gallery-milkbottles.jpg"
@@ -251,7 +238,7 @@
           />
         </picture>
 
-        <picture class="image-gallery__item">
+        <picture class="image-gallery__item" tabindex="0"> 
           <source
             media="(min-width:600px)"
             srcset="./images/desktop/image-gallery-orange.jpg"
@@ -263,7 +250,7 @@
           />
         </picture>
 
-        <picture class="image-gallery__item">
+        <picture class="image-gallery__item" tabindex="0">
           <source
             media="(min-width:600px)"
             srcset="./images/desktop/image-gallery-cone.jpg"
@@ -275,7 +262,7 @@
           />
         </picture>
 
-        <picture class="image-gallery__item">
+        <picture class="image-gallery__item" tabindex="0">
           <source
             media="(min-width:600px)"
             srcset="./images/desktop/image-gallery-sugarcubes.jpg"
@@ -286,31 +273,31 @@
             alt="hero background"
           />
         </picture>
+
       </section>
 
-      <footer class="main-footer">
 
-        <image class="main-footer__logo logo" src="./images/logo.svg" alt="logo" />
-
-        <nav class="main-footer__navbar">
-
-          <ol class="main-footer__navbar__list">
-            <li><a href="javascript:void(0)" class="main-footer__navbar--item" >About</a></li>
-            <li><a href="javascript:void(0)" class="main-footer__navbar--item">Services</a></li>
-            <li><a href="javascript:void(0)" class="main-footer__navbar--item">Projects</a></li>
-          </ol>
-
-        </nav>
-
-        <div class="main-footer__social-media">
-          <a href="javascript:void(0)" class="main-footer__social-media--link"><img class="main-footer__social-media--image" src="./images/icons/icon-instagram.svg" alt="instagram's icon" /></a>
-          <a href="javascript:void(0)" class="main-footer__social-media--link"><img class="main-footer__social-media--image" src="./images/icons/icon-twitter.svg" alt="twitter's icon" /></a>
-          <a href="javascript:void(0)" class="main-footer__social-media--link"><img class="main-footer__social-media--image" src="./images/icons/icon-pinterest.svg" alt="pinterest's icon" /></a>
-          <a href="javascript:void(0)" class="main-footer__social-media--link"><img class="main-footer__social-media--image" src="./images/icons/icon-facebook.svg" alt="facebook's icon" /></a>
-        </div>
-
-      </footer>
 
     </main>
+    <footer class="main-footer">
+
+      <image class="main-footer__logo logo" src="./images/logo.svg" alt="logo" tabindex="0" aria-label="back to top"/>
+
+      <nav class="main-footer__navbar">
+        <ol class="main-footer__navbar__list">
+          <li><a href="javascript:void(0)" class="main-footer__navbar--item" >About</a></li>
+          <li><a href="javascript:void(0)" class="main-footer__navbar--item">Services</a></li>
+          <li><a href="javascript:void(0)" class="main-footer__navbar--item">Projects</a></li>
+        </ol>
+      </nav>
+
+      <div class="main-footer__social-media">
+        <a href="javascript:void(0)" class="main-footer__social-media--link"><img class="main-footer__social-media--image" src="./images/icons/icon-instagram.svg" alt="instagram's icon" /></a>
+        <a href="javascript:void(0)" class="main-footer__social-media--link"><img class="main-footer__social-media--image" src="./images/icons/icon-twitter.svg" alt="twitter's icon" /></a>
+        <a href="javascript:void(0)" class="main-footer__social-media--link"><img class="main-footer__social-media--image" src="./images/icons/icon-pinterest.svg" alt="pinterest's icon" /></a>
+        <a href="javascript:void(0)" class="main-footer__social-media--link"><img class="main-footer__social-media--image" src="./images/icons/icon-facebook.svg" alt="facebook's icon" /></a>
+      </div>
+
+    </footer>
   </body>
 </html>

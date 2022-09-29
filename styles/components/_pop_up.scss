@@ -35,7 +35,8 @@
         @include lettering(1.8rem, 900, normal, $wrd500);
         position: relative;
 
-        &:hover {
+        &:hover,
+        &:focus-within {
           color: darken($accYellow, 2%);
         }
       }
@@ -45,7 +46,8 @@
         font-size: 1.5rem;
         background-color: $accYellow;
 
-        &:hover {
+        &:hover,
+        &:focus-within {
           background-color: $accLightblue;
         }
       }

@@ -23,7 +23,7 @@
 *::before,
 * {
   transition: background-color 300ms ease, color 300ms ease,
-    transform 300ms ease;
+    transform 300ms ease, opacity 300ms ease-in;
 }
 
 body {
@@ -33,7 +33,8 @@ body {
   @include scrollbars(0.3em, $accBlue);
 }
 
-main {
+main,
+footer {
   @include use-space(100%, 100%, $maxwidthMain);
   margin: 0 auto;
 }

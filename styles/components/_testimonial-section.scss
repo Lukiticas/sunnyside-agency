@@ -23,9 +23,10 @@
     @include place-in(center, center, 6em, row wrap);
     margin: 0 auto;
 
-    &:hover &__item:not(:hover) {
-      filter: blur(0.1rem);
-      transform: translatey(1.1%);
+    &:hover &__item:not(:hover),
+    &:focus-within &__item:not(:focus-within) {
+      filter: blur(0.1rem) grayscale(1);
+      transform: translatey(1.5%);
     }
 
     @media screen and (max-width: 600px) {
@@ -40,8 +41,9 @@
       text-align: center;
       cursor: default;
 
-      &:hover {
-        box-shadow: rgba(17, 17, 26, 0.1) 0px 0.2em 0px;
+      &:hover,
+      &:focus-within {
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 0.3em 0px;
       }
 
       @media screen and (max-width: 600px) {
@@ -51,7 +53,8 @@
         max-width: 5.5em;
         border-radius: 100vw;
 
-        &:hover {
+        &:hover,
+        &:focus-within {
           transform: scale(1.08);
         }
       }
@@ -66,7 +69,8 @@
           @include lettering(1.3em, 800, 2, $wrd800);
 
           margin-bottom: 1em;
-          &:hover {
+          &:hover,
+          &:focus-within {
             color: $accOrange;
           }
         }

@@ -9,7 +9,8 @@
     @include place-in(none, none, none, row wrap);
   }
 
-  &:hover &__item:not(:hover) {
+  &:hover &__item:not(:hover),
+  &:focus-within &__item:not(:focus-within) {
     filter: grayscale(100%) blur(0.1rem);
   }
 
@@ -20,7 +21,8 @@
 
     transition: all 200ms ease-in;
 
-    &:hover {
+    &:hover,
+    &:focus-within {
       & > * {
         transform: scale(1.2);
       }

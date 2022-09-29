@@ -108,24 +108,22 @@
   }
 }
 
-@keyframes appearFromLeft {
+@keyframes appearFromTop {
   from {
-    transform: translateX(100vw);
+    transform: translateY(-100vh);
   }
 
   to {
-    transform: translateX(0vw);
+    transform: translateY(0vw);
   }
 }
 
-@keyframes appearFromRight {
-  from {
-    transform: translateX(-100vw);
-  }
+.info-section > * {
+  opacity: 1;
+}
 
-  to {
-    transform: translateX(0vw);
-  }
+.opacity-zero {
+  opacity: 0;
 }
 
 $headerH: 49rem;

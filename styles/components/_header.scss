@@ -27,7 +27,8 @@ header {
     &__item {
       color: $wrd300;
 
-      &:hover {
+      &:hover,
+      &:focus-within {
         color: $accBlue;
       }
     }
@@ -37,7 +38,8 @@ header {
     width: 13rem;
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus-within {
       transform: scale(1.05) rotate(5deg);
     }
   }
@@ -58,7 +60,8 @@ header {
     border: none;
     border-radius: 4rem;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       color: $bg300;
       background-color: transparentize($wrd300, 0.5);
     }
@@ -104,11 +107,13 @@ header {
     text-align: center;
 
     h2 {
+      cursor: default;
       position: relative;
       @include lettering(3.2rem, normal, 1.6, $wrd300, 1rem);
-      @include create-bar(100%, 0%, 0.1rem, 1rem, -1, $accOrange);
+      @include create-bar(100%, 0%, 0.8rem, 1.2rem, -1, $accOrange);
 
-      animation: appearFromRight 200ms ease-in forwards;
+      animation: appearFromTop 600ms cubic-bezier(0.82, 0.38, 0.27, 1.69)
+        forwards;
 
       a {
         text-decoration: none;
@@ -119,9 +124,6 @@ header {
       width: 3rem;
       cursor: pointer;
       animation: jumpInfinite 0.9s infinite alternate;
-      animation-timing-function: linear;
-
-      animation: appearFromLeft 200ms ease-in forwards;
     }
   }
 }

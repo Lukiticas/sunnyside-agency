@@ -15,7 +15,8 @@
     filter: brightness(0) saturate(100%) invert(32%) sepia(64%) saturate(381%)
       hue-rotate(118deg) brightness(97%) contrast(89%);
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       filter: none;
     }
   }
@@ -33,7 +34,8 @@
       color: $wrdDarkGreen;
       cursor: pointer;
 
-      &:hover {
+      &:hover,
+      &:focus-visible {
         color: $wrd300;
       }
     }
@@ -43,7 +45,8 @@
     @include place-in(center, center, 2.4rem, row nowrap);
 
     &--link {
-      &:hover > * {
+      &:hover > *,
+      &:focus-visible > * {
         transform: translateY(-50%) rotate(360deg);
         filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
           saturate(0%) hue-rotate(162deg) brightness(108%) contrast(101%);
