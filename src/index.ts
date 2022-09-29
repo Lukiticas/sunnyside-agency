@@ -26,6 +26,33 @@ const toggleClass = (el: Element, className: string, forClass?: string) => {
   }
 };
 
+(() => {
+  sections.forEach((section) => toggleClass(section, "opacity-zero"));
+})();
+
+/* OBSERVER FOR SCROLLING LOADING */
+
+const options = {
+  threshold: 0.1,
+};
+
+const callback: IntersectionObserverCallback = (entries, observer) => {
+  entries.forEach((item) => {
+    if (item.isIntersecting) {
+      item.target.classList.remove("opacity-zero");
+      observer.unobserve(item.target);
+    }
+  });
+};
+
+const observer = new IntersectionObserver(callback, options);
+
+/* EVENT LISTENERS */
+
+sections.forEach((wrapper) => {
+  observer.observe(wrapper);
+});
+
 arrowDown.addEventListener("click", () => {
   /* SCROLL TO MID BOTTOM */
   id("index")!.scrollIntoView({ behavior: "smooth", block: "center" });

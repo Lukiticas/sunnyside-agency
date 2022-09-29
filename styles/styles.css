@@ -170,6 +170,14 @@ table {
     transform: translateY(0vw);
   }
 }
+.info-section > * {
+  opacity: 1;
+}
+
+.opacity-zero {
+  opacity: 0;
+}
+
 header {
   width: 100vw;
   height: 49rem;
@@ -727,7 +735,7 @@ header {
 
 .main-footer {
   width: 100%;
-  height: 30rem;
+  height: 40rem;
   display: flex;
   justify-content: center;
   align-items: center;

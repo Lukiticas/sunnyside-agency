@@ -2,7 +2,7 @@
 @use "../utils/utils.scss" as *;
 
 .main-footer {
-  @include use-space(100%, 30rem);
+  @include use-space(100%, 40rem);
   @include place-in(center, center, 3rem, column nowrap);
 
   background-color: $bg400;
