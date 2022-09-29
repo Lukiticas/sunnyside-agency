@@ -106,7 +106,7 @@ header {
     font-family: $fontSecundary;
     text-align: center;
 
-    h2 {
+    &--title {
       cursor: default;
       position: relative;
       @include lettering(3.2rem, normal, 1.6, $wrd300, 1rem);
